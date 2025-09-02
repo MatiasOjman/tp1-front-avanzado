@@ -1,13 +1,18 @@
 const textoInput = document.getElementById("tarea");
 const textoTextarea = document.getElementById("explicacion");
+const contenedor =document.getElementById("contenedor-resultado"); 
 
 const boton = document.getElementById("mostrar");
-
-// Se añade el evento click, pasando la función `mostrar` como referencia, sin paréntesis.
 boton.addEventListener("click", mostrar);
 
 function mostrar() {
-  // Se accede a los valores de las variables globales.
-  alert(textoInput.value + " " + textoTextarea.value);
+ const resultadoinput= document.createElement("h1");
+  resultadoinput.innerText= textoInput.value;
+  contenedor.appendChild(resultadoinput);
+  const resultadotext= document.createElement("p");
+  resultadotext.innerText= textoTextarea.value;
+  contenedor.appendChild(resultadotext);
+ resultadoinput.classList.toggle("resultadosinput")
+ resultadotext.classList.toggle("resultadostext")
 }
  
