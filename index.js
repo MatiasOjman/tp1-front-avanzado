@@ -16,7 +16,7 @@ function mostrar() {
     resultadotext.classList.add("resultadostext")
 
  const respuesta= document.createElement("div");
-   respuesta.classList.add("resultado");
+   respuesta.classList.add("respuesta");
    
  
    contadorDivs++;
