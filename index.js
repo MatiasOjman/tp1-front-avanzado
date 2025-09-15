@@ -1,7 +1,8 @@
 const textoInput = document.getElementById("tarea");
 const textoTextarea = document.getElementById("explicacion");
 const contenedor =document.getElementById("contenedor-resultado"); 
-
+const colorfondo= document.getElementById("colorfondo");
+const colorletra= document.getElementById("colorletra");
 const boton = document.getElementById("mostrar");
 boton.addEventListener("click", mostrar);
 
@@ -10,6 +11,7 @@ function mostrar() {
  const resultadoinput= document.createElement("h1");
    resultadoinput.innerText= textoInput.value;
    resultadoinput.classList.add("resultadosinput")
+   resultadoinput.style.color = colorletra.value;
    
   const resultadotext= document.createElement("p");
     resultadotext.innerText= textoTextarea.value;
@@ -17,7 +19,8 @@ function mostrar() {
 
  const respuesta= document.createElement("div");
    respuesta.classList.add("respuesta");
-   
+   respuesta.style.backgroundColor = colorfondo.value
+   respuesta.style.color = colorletra.value
  
    contadorDivs++;
    respuesta.id = `respuesta-${contadorDivs}`;
